@@ -25,8 +25,15 @@ playButton.addEventListener("click", function (){
 //number -> (number) the number ti set inside of the square element
 //return -> (object) the square element
 function createSquare (number) {
+    const level = parseInt(levelSelectHtml.value);
     const square = document.createElement("div");
-    square.classList.add("square");
+    if (level === 100) {
+        square.classList.add("square");
+    } else if ( level === 81) {
+        square.classList.add("square9x");
+    } else if (level === 49) {
+        square.classList.add("square7x");
+    }
     square.innerHTML = (number);
     return square;
 }
