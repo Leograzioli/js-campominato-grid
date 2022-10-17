@@ -42,8 +42,12 @@ main {
 .wrapper {
     width: 650px;
     height: 650px;
-    display: flex;
+    display: none;
     flex-wrap: wrap;
+}
+
+.wrapper.active {
+    display: flex;
 }
 
 .square {
@@ -55,6 +59,12 @@ main {
     border: 1px solid black;
 }
 
+
+.blue {
+    background-color: blue;
+}
+
+
 /******* FOOTER *******/
 footer {
     width: 100%;
@@ -62,3 +72,4 @@ footer {
     line-height: 80px;
     padding-left: 1rem;
 }
+
