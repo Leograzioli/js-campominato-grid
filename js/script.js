@@ -3,7 +3,7 @@ const wrapper = document.querySelector(".wrapper");
 const playButton = document.querySelector(".play-button");
 
 playButton.addEventListener("click", function (){
-
+    wrapper.innerHTML = "";
     //to insert the square element with random number on the DOM and change color on click
     wrapper.classList.add("active");
     for (let i = 1; i < (easyLevel + 1); i++) {
@@ -11,11 +11,9 @@ playButton.addEventListener("click", function (){
         const theSquare = createSquare(element);
         
         theSquare.addEventListener("click", onSquareClick)
-        
         wrapper.append(theSquare); 
     }
 })
-
 
 //FUNCTIONS
 
