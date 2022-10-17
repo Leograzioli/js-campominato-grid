@@ -2,8 +2,6 @@ const wrapper = document.querySelector(".wrapper");
 const playButton = document.querySelector(".play-button");
 const levelSelectHtml = document.getElementById("game-level");
 
-console.log(levelSelectHtml);
-
 playButton.addEventListener("click", function (){
     const level = parseInt(levelSelectHtml.value);   
     wrapper.innerHTML = "";
@@ -23,7 +21,7 @@ playButton.addEventListener("click", function (){
 //FUNCTIONS
 
 //create a square element to add on DOM
-//number -> (number) the number ti set inside of the square element
+//number -> (number) the number to set inside of the square element
 //return -> (object) the square element
 function createSquare (number) {
     const level = parseInt(levelSelectHtml.value);
