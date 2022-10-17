@@ -7,6 +7,7 @@ console.log(levelSelectHtml);
 playButton.addEventListener("click", function (){
     const level = parseInt(levelSelectHtml.value);   
     wrapper.innerHTML = "";
+    console.clear();
 
     //to insert the square element with random number on the DOM and change color on click
     wrapper.classList.add("active");
