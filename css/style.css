@@ -59,6 +59,24 @@ main {
     border: 1px solid black;
 }
 
+.square9x {
+    width: calc(100% / 9);
+    height: calc(100% / 9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+}
+
+.square7x {
+    width: calc(100% / 7);
+    height: calc(100% / 7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+}
+
 
 .blue {
     background-color: blue;
