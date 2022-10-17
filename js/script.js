@@ -26,12 +26,13 @@ playButton.addEventListener("click", function (){
 function createSquare (number) {
     const level = parseInt(levelSelectHtml.value);
     const square = document.createElement("div");
+    square.classList.add("square");
     if (level === 100) {
-        square.classList.add("square");
+        square.classList.add("easy")
     } else if ( level === 81) {
-        square.classList.add("square9x");
+        square.classList.add("normal");
     } else if (level === 49) {
-        square.classList.add("square7x");
+        square.classList.add("hard");
     }
     square.innerHTML = (number);
     return square;
