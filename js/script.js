@@ -1,5 +1,4 @@
 const easyLevel = 100;
-const numberGenerate = addRdnNumberToArray(easyLevel);
 const wrapper = document.querySelector(".wrapper");
 const playButton = document.querySelector(".play-button");
 
@@ -7,8 +6,8 @@ playButton.addEventListener("click", function (){
 
     //to insert the square element with random number on the DOM and change color on click
     wrapper.classList.add("active");
-    for (let i = 0; i < numberGenerate.length; i++) {
-        const element = numberGenerate[i];
+    for (let i = 1; i < (easyLevel + 1); i++) {
+        const element = [i];
         const theSquare = createSquare(element);
         
         theSquare.addEventListener("click", onSquareClick)
@@ -19,28 +18,6 @@ playButton.addEventListener("click", function (){
 
 
 //FUNCTIONS
-
-//generate a random number between min and max parameters 
-//min -> (number) the min number to generate
-//max -> (number) the biggest number to generate
-//return -> (number)
-function rndNumber(min, max) {
-    return Math.floor(Math.random() * (max - min + 1) ) + min;
-}
-
-//create an array with random numbers 
-//arrayLength -> (number) number of numbers un the array
-//return -> (array)
-function addRdnNumberToArray(arrayLength) {
-    const arrayNumbers = [];
-    while (arrayNumbers.length < arrayLength) {
-        const rdnNum = rndNumber(1, arrayLength);
-        if (!arrayNumbers.includes(rdnNum)) {
-            arrayNumbers.push(rdnNum);
-        }
-    }
-    return arrayNumbers;
-}
 
 //create a square element to add on DOM
 //number -> (number) the number ti set inside of the square element
@@ -53,7 +30,7 @@ function createSquare (number) {
     return square;
 }
 
-
+//on clic add class blue to element
 function onSquareClick() {
     this.classList.add("blue");
     console.log(this.innerHTML);
