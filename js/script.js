@@ -3,12 +3,12 @@ const playButton = document.querySelector(".play-button");
 const levelSelectHtml = document.getElementById("game-level");
 
 playButton.addEventListener("click", function (){
-    const level = parseInt(levelSelectHtml.value);   
-    wrapper.innerHTML = "";
     console.clear();
+    wrapper.innerHTML = "";
+    wrapper.classList.add("active");
+    const level = parseInt(levelSelectHtml.value);   
 
     //to insert the square element with random number on the DOM and change color on click
-    wrapper.classList.add("active");
     for (let i = 1; i < (level + 1); i++) {
         const element = [i];
         const theSquare = createSquare(element);
