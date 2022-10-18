@@ -2,16 +2,20 @@ const wrapper = document.querySelector(".wrapper");
 const playButton = document.querySelector(".play-button");
 const levelSelectHtml = document.getElementById("game-level");
 
-playButton.addEventListener("click", function (){
+playButton.addEventListener("click", startGame)
+
+
+
+//FUNCTIONS
+
+//clear the innerhtml and console, show the game window in base of choosen level
+function startGame (){
     console.clear();
     wrapper.innerHTML = "";
     wrapper.classList.add("active");
     const level = parseInt(levelSelectHtml.value);   
-
     generateElement(level);
-})
-
-//FUNCTIONS
+}
 
 //based on the user choise set the level of the game
 //level -> (number) number given by the level choice
