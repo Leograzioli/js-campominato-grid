@@ -8,13 +8,13 @@ playButton.addEventListener("click", function (){
     wrapper.classList.add("active");
     const level = parseInt(levelSelectHtml.value);   
 
-    elementGenerator(level);
+    generateElement(level);
 })
 
 //FUNCTIONS
 
 //based on the user choise set the level of the game
-//level -> (number) number given by the level choise
+//level -> (number) number given by the level choice
 //return -> (string)
 function levelSelector(level) {
     let selected = "";
@@ -30,22 +30,22 @@ function levelSelector(level) {
 
 //create a square element to add on DOM
 //number -> (number) the number to set inside of the square element
-//levelChoise -> (number) number given by the level choise
+//levelChoice -> (number) number given by the level choice
 //return -> (object) the square element
-function createSquare (number, levelChoise) {
+function createSquare (number, levelChoice) {
     const square = document.createElement("div");
     square.classList.add("square");
-    square.classList.add(levelSelector(levelChoise))
+    square.classList.add(levelSelector(levelChoice))
     square.innerHTML = (number);
     return square;
 }
 
 //add square with a number inside
-//levelChoise -> (number) number given by the level choise
-function elementGenerator (levelChoise) {
-    for (let i = 1; i < (levelChoise + 1); i++) {
+//levelChoice -> (number) number given by the level choice
+function generateElement (levelChoice) {
+    for (let i = 1; i < (levelChoice + 1); i++) {
         const element = [i];
-        const theSquare = createSquare(element, levelChoise);
+        const theSquare = createSquare(element, levelChoice);
         theSquare.addEventListener("click", onSquareClick)
         wrapper.append(theSquare); 
     }
