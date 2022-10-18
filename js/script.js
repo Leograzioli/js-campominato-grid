@@ -5,7 +5,6 @@ const levelSelectHtml = document.getElementById("game-level");
 playButton.addEventListener("click", startGame)
 
 
-
 //FUNCTIONS
 
 //clear the innerhtml and console, show the game window in base of choosen level
@@ -17,7 +16,7 @@ function startGame (){
     generateElement(level);
 }
 
-//based on the user choise set the level of the game
+//based on the user choice set the level of the game
 //level -> (number) number given by the level choice
 //return -> (string)
 function levelSelector(level) {
