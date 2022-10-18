@@ -57,5 +57,5 @@ function generateElement (levelChoice) {
 //on clic add class blue to element
 function onSquareClick() {
     this.classList.add("blue");
-    console.log(this.innerHTML);
+    console.log(this.textContent);
 }
